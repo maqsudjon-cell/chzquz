@@ -5,6 +5,10 @@ Veb-studiya sayti. Bitta fayl (`index.html`), statik, GitHub Pages'da turadi.
 - **Hozirgi manzil:** https://flarestamina.com/chzquz/
 - **Kelajakdagi manzil:** https://chzq.uz
 
+> **Yangi dizayn (v2):** `chzquz1/` papkasida noldan yozilgan monoxrom versiya turadi —
+> https://flarestamina.com/chzquz/chzquz1/ . Batafsil: [`chzquz1/README.md`](chzquz1/README.md).
+> Bu sayt (v1) tegilmagan holda ishlab turadi.
+
 ## Tuzilishi
 
 ```
