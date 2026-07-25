@@ -48,7 +48,7 @@
 html[data-theme="light"]{
   --bg:#FAFAF7; --bg2:#FFFFFF; --card:#FFFFFF; --card2:#F4F5F1;
   --ink:#0B0D10; --ink2:#3C434E; --mut:#69707D;
-  --line:rgba(10,12,16,.13); --line2:rgba(10,12,16,.07);
+  --line:rgba(10,12,16,.15); --line2:rgba(10,12,16,.10);
   --acc:#CFF54A; --acc-ink:#0A0B0D; --acc-txt:#5C7A00; --acc-soft:rgba(140,180,0,.13);
   --shadow:0 30px 60px -34px rgba(20,25,15,.35);
 }
@@ -179,17 +179,6 @@ h1 .u path{stroke:var(--acc);stroke-width:9;fill:none;stroke-linecap:round;
 .hstats b{display:block;font-family:var(--disp);font-size:clamp(1.5rem,2.6vw,2rem);letter-spacing:-.04em;line-height:1}
 .hstats span{display:block;margin-top:8px;font-size:.8rem;color:var(--mut);font-weight:500;line-height:1.35}
 
-/* ============ marquee ============ */
-.mq{overflow:hidden;padding:26px 0;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);position:relative;
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
-  mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
-.mq-t{display:flex;gap:44px;width:max-content;animation:slide 34s linear infinite}
-.mq:hover .mq-t{animation-play-state:paused}
-@keyframes slide{to{transform:translateX(-50%)}}
-.mq-t a{display:flex;align-items:center;gap:10px;font-size:.94rem;font-weight:650;color:var(--mut);letter-spacing:-.01em;transition:color .18s;padding-right:44px}
-.mq-t a:hover{color:var(--ink)}
-.mq-t a::before{content:"";width:6px;height:6px;border-radius:99px;background:var(--acc);flex:none;opacity:.7}
-
 /* ============ cards ============ */
 .cards{display:grid;gap:18px}
 .g3{grid-template-columns:repeat(3,1fr)}
@@ -219,8 +208,7 @@ h1 .u path{stroke:var(--acc);stroke-width:9;fill:none;stroke-linecap:round;
 @media (prefers-reduced-motion:reduce){
   .rv{opacity:1;transform:none;transition:none}
   h1 .u path{animation:none;stroke-dashoffset:0}
-  .mq-t{animation:none}
-  html{scroll-behavior:auto}
+    html{scroll-behavior:auto}
 }
 </style>
 </head>
@@ -242,6 +230,7 @@ h1 .u path{stroke:var(--acc);stroke-width:9;fill:none;stroke-linecap:round;
       <a href="#services" data-i18n="nav_s">Xizmatlar</a>
       <a href="#works" data-i18n="nav_w">Ishlar</a>
       <a href="#why" data-i18n="nav_y">Nega biz</a>
+      <a href="#compare" data-i18n="nav_cm">Taqqoslash</a>
       <a href="#pricing" data-i18n="nav_p">Narxlar</a>
       <a href="#faq" data-i18n="nav_f">Savollar</a>
     </nav>
@@ -265,8 +254,10 @@ h1 .u path{stroke:var(--acc);stroke-width:9;fill:none;stroke-linecap:round;
   <a href="#services" data-i18n="nav_s">Xizmatlar</a>
   <a href="#works" data-i18n="nav_w">Ishlar</a>
   <a href="#why" data-i18n="nav_y">Nega biz</a>
+  <a href="#compare" data-i18n="nav_cm">Taqqoslash</a>
   <a href="#process" data-i18n="nav_pr">Jarayon</a>
   <a href="#pricing" data-i18n="nav_p">Narxlar</a>
+  <a href="#guarantee" data-i18n="nav_g">Kafolat</a>
   <a href="#faq" data-i18n="nav_f">Savollar</a>
   <a class="btn btn-p" href="#contact" data-i18n="nav_cta">Bepul prototip</a>
 </div>
@@ -278,6 +269,8 @@ h1 .u path{stroke:var(--acc);stroke-width:9;fill:none;stroke-linecap:round;
 <section class="hero">
   <div class="grid-bg"></div><div class="glow"></div>
   <div class="wrap">
+   <div class="hgrid">
+    <div>
     <div class="tagpill rv"><em data-i18n="h_pill_b">Toshkent</em><span data-i18n="h_pill">sayt · Telegram bot · mini app studiyasi</span></div>
     <h1 class="rv" data-i18n-html="h_h1">Biznesingiz uchun sayt.<br><span class="u">1–3 kunda<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M4 8 C 80 2, 210 2, 296 7"/></svg></span></h1>
     <p class="lead rv" data-i18n="h_sub">Avval bepul prototipni ko'rasiz — keyin to'lash haqida gaplashamiz. Hosting bepul, kod sizniki, muddat aniq.</p>
@@ -290,6 +283,21 @@ h1 .u path{stroke:var(--acc);stroke-width:9;fill:none;stroke-linecap:round;
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
+    <div class="hrisk rv">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><b data-i18n="hr1">Prototip bepul</b></span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><b data-i18n="hr2">Oldindan to'lov yo'q</b></span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><b data-i18n="hr3">Kod va domen sizniki</b></span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><b data-i18n="hr4">Oylik to'lov yo'q</b></span>
+    </div>
+    </div>
+    <div class="hshot rv" aria-hidden="true">
+      <div class="fr">
+        <div class="bar"><i></i><i></i><i></i><span>zedavlod.uz</span></div>
+        <img src="assets/shots/zedavlod-desk.jpg" alt="" width="1400" height="875" decoding="async">
+      </div>
+      <div class="fl" data-i18n="h_fl">Uch tilli biznes sayt</div>
+    </div>
+   </div>
     <div class="hstats rv">
       <div><b>6</b><span data-i18n="st1">jonli loyiha — hoziroq oching</span></div>
       <div><b>1–3<i style="font-size:.6em;font-style:normal" data-i18n="u_days"> kun</i></b><span data-i18n="st2">lending tayyor bo'ladigan muddat</span></div>
@@ -299,8 +307,11 @@ h1 .u path{stroke:var(--acc);stroke-width:9;fill:none;stroke-linecap:round;
   </div>
 </section>
 
-<div class="mq" aria-hidden="true">
-  <div class="mq-t" id="mqt"></div>
+<div class="pband">
+  <div class="wrap in">
+    <span class="lbl" data-i18n="pb_lbl">Jonli loyihalar</span>
+    <span id="pbl"></span>
+  </div>
 </div>
 
 <!-- ===================== SERVICES ===================== -->
@@ -544,7 +555,61 @@ footer{border-top:1px solid var(--line2);padding:56px 0 34px;background:var(--bg
 .fabtg svg{width:23px;height:23px}
 
 /* ============ responsive ============ */
+
+/* ============ hero: ishonch chiplari va vizual ============ */
+.hrisk{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.hrisk span{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:600;color:var(--ink2);
+  background:var(--card);border:1px solid var(--line2);border-radius:999px;padding:7px 13px}
+.hrisk svg{width:13px;height:13px;color:var(--acc-txt);flex:none}
+.hgrid{display:grid;grid-template-columns:minmax(0,1fr)}
+.hshot{display:none;position:relative}
+.hshot .fr{background:var(--card2);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  box-shadow:var(--shadow);transform:perspective(1300px) rotateY(-10deg) rotateX(3deg)}
+.hshot .bar{display:flex;align-items:center;gap:6px;padding:9px 12px;border-bottom:1px solid var(--line2)}
+.hshot .bar i{width:8px;height:8px;border-radius:99px;background:var(--line);display:block;flex:none}
+.hshot .bar span{margin-left:8px;font-size:.66rem;color:var(--mut);font-weight:650}
+.hshot img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top center;display:block}
+.hshot .fl{position:absolute;left:-16px;bottom:22px;background:var(--acc);color:var(--acc-ink);
+  font-size:.72rem;font-weight:800;padding:9px 14px;border-radius:999px;box-shadow:var(--shadow);letter-spacing:-.01em}
+@media (min-width:1080px){
+  .hgrid{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:46px;align-items:center}
+  .hshot{display:block}
+  .hero h1{font-size:clamp(2.4rem,3.6vw,3.15rem)}
+}
+
+/* ============ ishonch tasmasi (marquee o'rniga) ============ */
+.pband{border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);background:var(--bg2);padding:20px 0}
+.pband .in{display:flex;flex-wrap:wrap;align-items:center;gap:11px 24px}
+.pband #pbl{display:flex;flex-wrap:wrap;align-items:center;gap:11px 24px}
+.pband .lbl{font-size:.71rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--mut);flex:none}
+.pband a{display:inline-flex;align-items:center;gap:8px;font-size:.92rem;font-weight:650;color:var(--ink2);transition:color .18s}
+.pband a::before{content:"";width:5px;height:5px;border-radius:99px;background:var(--acc);flex:none}
+.pband a:hover{color:var(--ink)}
+
+/* ============ taqqoslash jadvali ============ */
+.cmpwrap{overflow-x:auto;border:1px solid var(--line2);border-radius:var(--r);background:var(--card);
+  -webkit-overflow-scrolling:touch}
+.cmp{width:100%;border-collapse:collapse;min-width:680px;font-size:.9rem}
+.cmp th,.cmp td{padding:15px 18px;text-align:left;border-bottom:1px solid var(--line2);vertical-align:top}
+.cmp thead th{font-size:.73rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);
+  background:var(--card2);white-space:nowrap}
+.cmp thead th.us{color:var(--acc-ink);background:var(--acc)}
+.cmp tbody th{font-weight:650;color:var(--ink2);width:25%}
+.cmp td{color:var(--mut)}
+.cmp td.us{font-weight:700;color:var(--ink);background:var(--acc-soft)}
+.cmp tr:last-child th,.cmp tr:last-child td{border-bottom:0}
+.cmpnote{font-size:.8rem;color:var(--mut);margin-top:16px;line-height:1.6}
+
+/* ============ kafolat ============ */
+.gua{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line2);
+  border:1px solid var(--line2);border-radius:var(--r);overflow:hidden}
+.gua>div{background:var(--card);padding:26px 22px}
+.gua svg{width:21px;height:21px;color:var(--acc-txt)}
+.gua h3{font-size:1rem;margin-top:15px;letter-spacing:-.02em}
+.gua p{font-size:.86rem;color:var(--mut);margin-top:8px;line-height:1.55}
+
 @media (max-width:1000px){
+  .gua{grid-template-columns:repeat(2,minmax(0,1fr))}
   .g3{grid-template-columns:repeat(2,1fr)}
   .ptable{grid-template-columns:1fr}
   .plan.hi{order:-1}
@@ -574,6 +639,7 @@ footer{border-top:1px solid var(--line2);padding:56px 0 34px;background:var(--bg
   .steps{grid-template-columns:1fr}
   .inclg{grid-template-columns:1fr}
   .wrap{padding:0 18px}
+  .gua{grid-template-columns:minmax(0,1fr)}
   /* header qatori 360-390px ekranlarga sig'ishi uchun */
   .hrow{gap:9px}
   .hact{gap:6px;margin-left:4px}
@@ -596,6 +662,17 @@ footer{border-top:1px solid var(--line2);padding:56px 0 34px;background:var(--bg
     <div class="proofline rv">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
       <span data-i18n="w_proof">Har bir havolani tekshirib ko'rishingiz mumkin. Biz yo'q ishni ko'rsatmaymiz va son o'ylab topmaymiz.</span>
+    </div>
+    <div class="cta-band rv" style="margin-top:44px">
+      <h2 data-i18n="mc_t">Shu saytlarni ko'rdingiz. Endi o'zingizniki bo'lsin.</h2>
+      <p data-i18n="mc_d">Bir necha gap yozing — 24 soat ichida saytingizning birinchi ekranini yasab, jonli havolasini yuboraman. Bepul, majburiyatsiz.</p>
+      <div class="row">
+        <a class="btn btn-d" href="https://t.me/mrbmp13" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.9 19c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.2c-.3.3-.5.5-1 .5l.3-4.7 8.5-7.7c.4-.3-.1-.5-.6-.2L6.9 13.1 2.3 11.7c-1-.3-1-1 .2-1.5l18.1-7c.8-.3 1.6.2 1.3 1.1z"/></svg>
+          <span data-i18n="cta_tg">Telegramda yozish</span>
+        </a>
+        <a class="btn btn-o" href="#pricing"><span data-i18n="mc_cta2">Narxlarni ko'rish</span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -629,11 +706,44 @@ footer{border-top:1px solid var(--line2);padding:56px 0 34px;background:var(--bg
   </div>
 </section>
 
+<!-- ===================== COMPARE ===================== -->
+<section class="sec" id="compare" style="background:var(--bg2);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="kicker"><i></i><b>04</b> <span data-i18n="k_cmp">Taqqoslash</span></span>
+      <h2 data-i18n="cm_title">Konstruktor, frilanser, agentlik — va biz</h2>
+      <p class="lead" data-i18n="cm_sub">Har birining o'z o'rni bor. Quyida farqni bo'rttirmasdan, bor holicha yozdik — o'zingizga mos variantni tanlang.</p>
+    </div>
+    <div class="cmpwrap rv">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="us">chiziq</th>
+            <th data-i18n="cm_c1">Konstruktor</th>
+            <th data-i18n="cm_c2">Frilanser</th>
+            <th data-i18n="cm_c3">Agentlik</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th data-i18n="cm_r1">Boshlang'ich narx</th><td class="us" data-i18n="cm_r1a">1.5–6 mln so'm</td><td data-i18n="cm_r1b">Arzon boshlanadi</td><td data-i18n="cm_r1c">1–5 mln so'm</td><td data-i18n="cm_r1d">10–40 mln so'm</td></tr>
+          <tr><th data-i18n="cm_r2">Oylik to'lov</th><td class="us" data-i18n="cm_r2a">Yo'q — hosting bepul</td><td data-i18n="cm_r2b">Har oy abonent to'lovi</td><td data-i18n="cm_r2c">Hostingni o'zingiz to'lasiz</td><td data-i18n="cm_r2d">Ko'pincha oylik xizmat</td></tr>
+          <tr><th data-i18n="cm_r3">Muddat</th><td class="us" data-i18n="cm_r3a">1–14 kun, yozma kelishiladi</td><td data-i18n="cm_r3b">O'zingiz yasaysiz</td><td data-i18n="cm_r3c">Har xil — kafolat kam</td><td data-i18n="cm_r3d">1–3 oy</td></tr>
+          <tr><th data-i18n="cm_r4">Kim bilan gaplashasiz</th><td class="us" data-i18n="cm_r4a">Saytni yozadigan odam bilan</td><td data-i18n="cm_r4b">Qo'llanma va chatbot</td><td data-i18n="cm_r4c">Bajaruvchi bilan</td><td data-i18n="cm_r4d">Akkaunt menejer bilan</td></tr>
+          <tr><th data-i18n="cm_r5">Kod va repozitoriy</th><td class="us" data-i18n="cm_r5a">To'liq sizga o'tadi</td><td data-i18n="cm_r5b">Platformada qulflanadi</td><td data-i18n="cm_r5c">Kelishuvga qarab</td><td data-i18n="cm_r5d">Ko'pincha agentlikda qoladi</td></tr>
+          <tr><th data-i18n="cm_r6">Avval ko'rish imkoni</th><td class="us" data-i18n="cm_r6a">Bepul prototip, keyin to'lov</td><td data-i18n="cm_r6b">Shablonni ko'rasiz</td><td data-i18n="cm_r6c">Odatda oldindan to'lov</td><td data-i18n="cm_r6d">Shartnoma va oldindan to'lov</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cmpnote rv" data-i18n="cm_note">Narxlar 2026-yil holatiga ko'ra Toshkent bozoridagi o'rtacha ko'rsatkichlar. Agar sizga konstruktor yetarli bo'lsa — buni to'g'ridan-to'g'ri aytamiz.</p>
+  </div>
+</section>
+
 <!-- ===================== PROCESS ===================== -->
 <section class="sec" id="process">
   <div class="wrap">
     <div class="shead rv">
-      <span class="kicker"><i></i><b>04</b> <span data-i18n="k_proc">Jarayon</span></span>
+      <span class="kicker"><i></i><b>05</b> <span data-i18n="k_proc">Jarayon</span></span>
       <h2 data-i18n="p_title">Avval ko'rasiz — keyin to'laysiz</h2>
       <p class="lead" data-i18n="p_sub">Pul so'rashdan oldin nima qilayotganimizni ko'rsatamiz. Yoqmasa — hech qanday majburiyat yo'q.</p>
     </div>
@@ -670,7 +780,7 @@ footer{border-top:1px solid var(--line2);padding:56px 0 34px;background:var(--bg
 <section class="sec" id="pricing" style="background:var(--bg2);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)">
   <div class="wrap">
     <div class="shead rv">
-      <span class="kicker"><i></i><b>05</b> <span data-i18n="k_price">Narxlar</span></span>
+      <span class="kicker"><i></i><b>06</b> <span data-i18n="k_price">Narxlar</span></span>
       <h2 data-i18n="pr_title">Ochiq narxlar. Yashirin to'lov yo'q.</h2>
       <p class="lead" data-i18n="pr_sub">Boshlashdan oldin aniq smeta va muddatni yozma kelishamiz. Keyin narx o'zgarmaydi.</p>
     </div>
@@ -738,11 +848,44 @@ footer{border-top:1px solid var(--line2);padding:56px 0 34px;background:var(--bg
   </div>
 </section>
 
+<!-- ===================== GUARANTEE ===================== -->
+<section class="sec" id="guarantee">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="kicker"><i></i><b>07</b> <span data-i18n="k_gua">Kafolat</span></span>
+      <h2 data-i18n="g_title">Xatarni o'zimizga olamiz</h2>
+      <p class="lead" data-i18n="g_sub">Tanimagan ustaga pul berish qo'rqinchli — buni bilamiz. Shuning uchun to'rt narsani yozma ravishda kafolatlaymiz.</p>
+    </div>
+    <div class="gua rv">
+      <div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8z"/></svg>
+        <h3 data-i18n="g1_t">Prototip mutlaqo bepul</h3>
+        <p data-i18n="g1_d">Bosh sahifaning birinchi ekranini 24 soatda yasab, jonli havolasini yuboraman. Yoqmasa — to'xtaymiz. To'lov ham, majburiyat ham yo'q.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <h3 data-i18n="g2_t">Kelishilgan narx o'zgarmaydi</h3>
+        <p data-i18n="g2_d">Boshlashdan oldin smeta va muddatni yozma qayd etamiz. Ish davomida "bu qo'shimcha to'lov" degan gap chiqmaydi.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 12.5A8.5 8.5 0 1 1 12 3.5"/><path d="M9 12.5l2.4 2.4L20 6.3"/></svg>
+        <h3 data-i18n="g3_t">14 kun bepul tuzatish</h3>
+        <p data-i18n="g3_d">Topshirgandan keyin 14 kun ichida topilgan har qanday xatolik va kichik tuzatish bepul. Undan keyin ham aloqadan yo'qolmaymiz.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v6c0 4.2-3.2 7.2-8 8-4.8-.8-8-3.8-8-8V7z"/><path d="M9.2 12.2l2 2 3.6-3.9"/></svg>
+        <h3 data-i18n="g4_t">Kod va domen sizniki</h3>
+        <p data-i18n="g4_d">Domen sizning nomingizga rasmiylashtiriladi, loyihaning to'liq kodi va repozitoriysi sizga o'tadi. Hech narsa bizda qulflanib qolmaydi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== FAQ ===================== -->
 <section class="sec" id="faq">
   <div class="wrap">
     <div class="shead rv" style="margin-left:auto;margin-right:auto;text-align:center;align-items:center">
-      <span class="kicker"><i></i><b>06</b> <span data-i18n="k_faq">Savol-javob</span></span>
+      <span class="kicker"><i></i><b>08</b> <span data-i18n="k_faq">Savol-javob</span></span>
       <h2 data-i18n="f_title">Ko'p so'raladigan savollar</h2>
     </div>
     <div class="faq rv" id="faqbox"></div>
@@ -848,7 +991,9 @@ footer{border-top:1px solid var(--line2);padding:56px 0 34px;background:var(--bg
         <a href="#services" data-i18n="nav_s">Xizmatlar</a>
         <a href="#works" data-i18n="nav_w">Ishlar</a>
         <a href="#why" data-i18n="nav_y">Nega biz</a>
+        <a href="#compare" data-i18n="nav_cm">Taqqoslash</a>
         <a href="#pricing" data-i18n="nav_p">Narxlar</a>
+        <a href="#guarantee" data-i18n="nav_g">Kafolat</a>
         <a href="#faq" data-i18n="nav_f">Savollar</a>
       </div>
       <div>
@@ -994,6 +1139,28 @@ var FAQ=[
 
 var T={
 uz:{
+hr1:"Prototip bepul",hr2:"Oldindan to'lov yo'q",hr3:"Kod va domen sizniki",hr4:"Oylik to'lov yo'q",
+h_fl:"Uch tilli biznes sayt",pb_lbl:"Jonli loyihalar",
+mc_t:"Shu saytlarni ko'rdingiz. Endi o'zingizniki bo'lsin.",
+mc_d:"Bir necha gap yozing — 24 soat ichida saytingizning birinchi ekranini yasab, jonli havolasini yuboraman. Bepul, majburiyatsiz.",
+mc_cta2:"Narxlarni ko'rish",
+nav_cm:"Taqqoslash",nav_g:"Kafolat",
+k_cmp:"Taqqoslash",cm_title:"Konstruktor, frilanser, agentlik — va biz",
+cm_sub:"Har birining o'z o'rni bor. Quyida farqni bo'rttirmasdan, bor holicha yozdik — o'zingizga mos variantni tanlang.",
+cm_c1:"Konstruktor",cm_c2:"Frilanser",cm_c3:"Agentlik",
+cm_r1:"Boshlang'ich narx",cm_r1a:"1.5–6 mln so'm",cm_r1b:"Arzon boshlanadi",cm_r1c:"1–5 mln so'm",cm_r1d:"10–40 mln so'm",
+cm_r2:"Oylik to'lov",cm_r2a:"Yo'q — hosting bepul",cm_r2b:"Har oy abonent to'lovi",cm_r2c:"Hostingni o'zingiz to'lasiz",cm_r2d:"Ko'pincha oylik xizmat",
+cm_r3:"Muddat",cm_r3a:"1–14 kun, yozma kelishiladi",cm_r3b:"O'zingiz yasaysiz",cm_r3c:"Har xil — kafolat kam",cm_r3d:"1–3 oy",
+cm_r4:"Kim bilan gaplashasiz",cm_r4a:"Saytni yozadigan odam bilan",cm_r4b:"Qo'llanma va chatbot",cm_r4c:"Bajaruvchi bilan",cm_r4d:"Akkaunt menejer bilan",
+cm_r5:"Kod va repozitoriy",cm_r5a:"To'liq sizga o'tadi",cm_r5b:"Platformada qulflanadi",cm_r5c:"Kelishuvga qarab",cm_r5d:"Ko'pincha agentlikda qoladi",
+cm_r6:"Avval ko'rish imkoni",cm_r6a:"Bepul prototip, keyin to'lov",cm_r6b:"Shablonni ko'rasiz",cm_r6c:"Odatda oldindan to'lov",cm_r6d:"Shartnoma va oldindan to'lov",
+cm_note:"Narxlar 2026-yil holatiga ko'ra Toshkent bozoridagi o'rtacha ko'rsatkichlar. Agar sizga konstruktor yetarli bo'lsa — buni to'g'ridan-to'g'ri aytamiz.",
+k_gua:"Kafolat",g_title:"Xatarni o'zimizga olamiz",
+g_sub:"Tanimagan ustaga pul berish qo'rqinchli — buni bilamiz. Shuning uchun to'rt narsani yozma ravishda kafolatlaymiz.",
+g1_t:"Prototip mutlaqo bepul",g1_d:"Bosh sahifaning birinchi ekranini 24 soatda yasab, jonli havolasini yuboraman. Yoqmasa — to'xtaymiz. To'lov ham, majburiyat ham yo'q.",
+g2_t:"Kelishilgan narx o'zgarmaydi",g2_d:"Boshlashdan oldin smeta va muddatni yozma qayd etamiz. Ish davomida \"bu qo'shimcha to'lov\" degan gap chiqmaydi.",
+g3_t:"14 kun bepul tuzatish",g3_d:"Topshirgandan keyin 14 kun ichida topilgan har qanday xatolik va kichik tuzatish bepul. Undan keyin ham aloqadan yo'qolmaymiz.",
+g4_t:"Kod va domen sizniki",g4_d:"Domen sizning nomingizga rasmiylashtiriladi, loyihaning to'liq kodi va repozitoriysi sizga o'tadi. Hech narsa bizda qulflanib qolmaydi.",
 skip:"Asosiy qismga o'tish",nav_s:"Xizmatlar",nav_w:"Ishlar",nav_y:"Nega biz",nav_pr:"Jarayon",nav_p:"Narxlar",nav_f:"Savollar",nav_cta:"Bepul prototip",
 h_pill_b:"Toshkent",h_pill:"sayt · Telegram bot · mini app studiyasi",
 h_h1:"Biznesingiz uchun sayt.<br><span class=\"u\">1–3 kunda__SVG__</span>",
@@ -1043,6 +1210,28 @@ meta_t:"chiziq — biznesingiz uchun sayt, Telegram bot va mini app | chzq.uz",
 meta_d:"Toshkentdagi veb-studiya. Lending 1.5 mln so'mdan, biznes sayt 3 mln so'mdan, Telegram bot va mini app. 1–3 kunda tayyor, hosting bepul."
 },
 ru:{
+hr1:"Прототип бесплатно",hr2:"Без предоплаты",hr3:"Код и домен ваши",hr4:"Без ежемесячной платы",
+h_fl:"Трёхъязычный корпоративный сайт",pb_lbl:"Живые проекты",
+mc_t:"Вы посмотрели эти сайты. Теперь пусть будет свой.",
+mc_d:"Напишите пару предложений — за 24 часа соберу первый экран вашего сайта и пришлю живую ссылку. Бесплатно, без обязательств.",
+mc_cta2:"Посмотреть цены",
+nav_cm:"Сравнение",nav_g:"Гарантия",
+k_cmp:"Сравнение",cm_title:"Конструктор, фрилансер, агентство — и мы",
+cm_sub:"У каждого варианта своё место. Ниже — без преувеличений, как есть. Выберите то, что подходит вам.",
+cm_c1:"Конструктор",cm_c2:"Фрилансер",cm_c3:"Агентство",
+cm_r1:"Начальная цена",cm_r1a:"1,5–6 млн сум",cm_r1b:"Стартует дёшево",cm_r1c:"1–5 млн сум",cm_r1d:"10–40 млн сум",
+cm_r2:"Ежемесячная плата",cm_r2a:"Нет — хостинг бесплатный",cm_r2b:"Абонплата каждый месяц",cm_r2c:"Хостинг платите сами",cm_r2d:"Часто месячное обслуживание",
+cm_r3:"Срок",cm_r3a:"1–14 дней, фиксируем письменно",cm_r3b:"Делаете сами",cm_r3c:"По-разному, гарантий мало",cm_r3d:"1–3 месяца",
+cm_r4:"С кем вы общаетесь",cm_r4a:"С тем, кто пишет сайт",cm_r4b:"С документацией и чат-ботом",cm_r4c:"С исполнителем",cm_r4d:"С аккаунт-менеджером",
+cm_r5:"Код и репозиторий",cm_r5a:"Полностью переходят к вам",cm_r5b:"Заперты в платформе",cm_r5c:"По договорённости",cm_r5d:"Часто остаются в агентстве",
+cm_r6:"Возможность увидеть заранее",cm_r6a:"Бесплатный прототип, оплата потом",cm_r6b:"Видите шаблон",cm_r6c:"Обычно предоплата",cm_r6d:"Договор и предоплата",
+cm_note:"Цены — средние по рынку Ташкента на 2026 год. Если вам достаточно конструктора, мы скажем об этом прямо.",
+k_gua:"Гарантия",g_title:"Риск берём на себя",
+g_sub:"Платить незнакомому исполнителю страшно — мы это понимаем. Поэтому четыре вещи гарантируем письменно.",
+g1_t:"Прототип полностью бесплатный",g1_d:"За 24 часа соберу первый экран главной страницы и пришлю живую ссылку. Не понравится — останавливаемся. Ни оплаты, ни обязательств.",
+g2_t:"Согласованная цена не меняется",g2_d:"До старта письменно фиксируем смету и срок. По ходу работы фразы «это за доплату» не будет.",
+g3_t:"14 дней бесплатных правок",g3_d:"В течение 14 дней после сдачи любая найденная ошибка и мелкая правка — бесплатно. И после этого мы не пропадаем.",
+g4_t:"Код и домен ваши",g4_d:"Домен оформляется на ваше имя, полный код проекта и репозиторий переходят к вам. Ничего не остаётся запертым у нас.",
 skip:"Перейти к содержимому",nav_s:"Услуги",nav_w:"Работы",nav_y:"Почему мы",nav_pr:"Процесс",nav_p:"Цены",nav_f:"Вопросы",nav_cta:"Бесплатный прототип",
 h_pill_b:"Ташкент",h_pill:"студия сайтов, Telegram-ботов и мини-приложений",
 h_h1:"Сайт для вашего бизнеса.<br><span class=\"u\">За 1–3 дня__SVG__</span>",
@@ -1092,6 +1281,28 @@ meta_t:"chiziq — сайты, Telegram-боты и мини-приложени�
 meta_d:"Веб-студия в Ташкенте. Лендинг от 1,5 млн сум, корпоративный сайт от 3 млн, Telegram-бот и мини-приложение. Готово за 1–3 дня, хостинг бесплатно."
 },
 en:{
+hr1:"Free prototype",hr2:"No upfront payment",hr3:"You own code and domain",hr4:"No monthly fee",
+h_fl:"Trilingual business site",pb_lbl:"Live projects",
+mc_t:"You have seen these sites. Now make one yours.",
+mc_d:"Write a couple of sentences — within 24 hours I will build the first screen of your site and send a live link. Free, no obligation.",
+mc_cta2:"See pricing",
+nav_cm:"Compare",nav_g:"Guarantee",
+k_cmp:"Compare",cm_title:"Builders, freelancers, agencies — and us",
+cm_sub:"Each option has its place. Below is the difference stated plainly, without exaggeration — pick what fits you.",
+cm_c1:"Site builder",cm_c2:"Freelancer",cm_c3:"Agency",
+cm_r1:"Starting price",cm_r1a:"1.5–6 million UZS",cm_r1b:"Starts cheap",cm_r1c:"1–5 million UZS",cm_r1d:"10–40 million UZS",
+cm_r2:"Monthly cost",cm_r2a:"None — hosting is free",cm_r2b:"Subscription every month",cm_r2c:"You pay hosting yourself",cm_r2d:"Often a monthly retainer",
+cm_r3:"Timeline",cm_r3a:"1–14 days, agreed in writing",cm_r3b:"You build it yourself",cm_r3c:"Varies, few guarantees",cm_r3d:"1–3 months",
+cm_r4:"Who you talk to",cm_r4a:"The person writing your site",cm_r4b:"Docs and a chatbot",cm_r4c:"The person doing the work",cm_r4d:"An account manager",
+cm_r5:"Code and repository",cm_r5a:"Handed over to you in full",cm_r5b:"Locked into the platform",cm_r5c:"Depends on the deal",cm_r5d:"Often stays with the agency",
+cm_r6:"Seeing it before you pay",cm_r6a:"Free prototype, payment after",cm_r6b:"You see a template",cm_r6c:"Usually payment up front",cm_r6d:"Contract and deposit",
+cm_note:"Prices are Tashkent market averages as of 2026. If a site builder is enough for you, we will say so directly.",
+k_gua:"Guarantee",g_title:"We carry the risk",
+g_sub:"Paying someone you do not know is nerve-racking — we get it. So we guarantee four things in writing.",
+g1_t:"The prototype is entirely free",g1_d:"Within 24 hours I build the first screen of your homepage and send a live link. If you do not like it, we stop. No payment, no obligation.",
+g2_t:"The agreed price does not move",g2_d:"Before we start we record the quote and the deadline in writing. There will be no \"that costs extra\" halfway through.",
+g3_t:"14 days of free fixes",g3_d:"For 14 days after delivery, every bug found and every small fix is free. And we do not disappear after that either.",
+g4_t:"You own the code and domain",g4_d:"The domain is registered in your name, and the full code and repository are handed to you. Nothing stays locked with us.",
 skip:"Skip to content",nav_s:"Services",nav_w:"Work",nav_y:"Why us",nav_pr:"Process",nav_p:"Pricing",nav_f:"FAQ",nav_cta:"Free prototype",
 h_pill_b:"Tashkent",h_pill:"websites · Telegram bots · mini apps",
 h_h1:"A website for your business.<br><span class=\"u\">In 1–3 days__SVG__</span>",
@@ -1183,9 +1394,25 @@ function renderFaq(){
   });
 }
 
+/* ishonch tasmasi: haqiqiy loyihalarning domenlari */
 function renderMq(){
-  var one=WORKS.map(function(w){return '<a href="'+w.u+'" target="_blank" rel="noopener">'+esc(w.h)+'</a>'}).join('');
-  $('#mqt').innerHTML=one+one;
+  $('#pbl').innerHTML=WORKS.map(function(w){
+    return '<a href="'+w.u+'" target="_blank" rel="noopener">'+esc(w.h)+'</a>';
+  }).join('');
+}
+
+/* FAQ uchun structured data — Google'da savol-javob ko'rinishi uchun */
+function renderFaqLd(){
+  var el=document.getElementById('faq-ld');
+  if(!el){el=document.createElement('script');el.type='application/ld+json';el.id='faq-ld';document.head.appendChild(el)}
+  el.textContent=JSON.stringify({
+    "@context":"https://schema.org","@type":"FAQPage",
+    "inLanguage":lang,
+    "mainEntity":FAQ.map(function(f){return {
+      "@type":"Question","name":f.q[lang],
+      "acceptedAnswer":{"@type":"Answer","text":f.a[lang]}
+    }})
+  });
 }
 
 /* ================= i18n ================= */
@@ -1199,7 +1426,7 @@ function setLang(l,save){
   document.title=t.meta_t;
   var md=$('meta[name="description"]'); if(md)md.setAttribute('content',t.meta_d);
   $$('.langs button').forEach(function(b){b.classList.toggle('on',b.dataset.lang===lang)});
-  renderWorks();renderFaq();renderMq();
+  renderWorks();renderFaq();renderMq();renderFaqLd();
   if(save)try{localStorage.setItem('chzq-lang',lang)}catch(e){}
 }
 
