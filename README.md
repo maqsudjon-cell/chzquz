@@ -2,14 +2,14 @@
 
 Veb-studiya sayti. Statik, GitHub Pages'da turadi.
 
-- **Sayt:** https://flarestamina.com/chzquz/ — v2, monoxrom dizayn
-- **Eski versiya (arxiv):** https://flarestamina.com/chzquz/v1/ — o'zgarishsiz saqlanib turadi
+- **Sayt:** https://flarestamina.com/chzquz/
+- **Monoxrom variant (arxiv):** https://flarestamina.com/chzquz/v2/ — `noindex`
 - **Kelajakdagi manzil:** https://chzq.uz
 
 ## Tuzilishi
 
 ```
-index.html            v2 — butun sayt (HTML + CSS + JS bitta faylda)
+index.html            butun sayt (HTML + CSS + JS bitta faylda)
 404.html              xato sahifasi
 favicon.svg/.ico      brend belgisi — monoxrom
 site.webmanifest      PWA manifest
@@ -17,9 +17,9 @@ robots.txt sitemap.xml
 assets/og.png/.jpg    ijtimoiy tarmoq rasmi 1200x630
 assets/icon-*.png     favicon o'lchamlari
 assets/shots/         real loyihalarning haqiqiy skrinshotlari (1400x875)
-tools/brand.py        favicon / ikonka / og.png generatori
 
-v1/                   birinchi versiya — to'liq ishlaydigan arxiv nusxasi
+v2/                   monoxrom variant — to'liq ishlaydigan arxiv nusxasi
+                      o'z assets/ va tools/ papkalari bilan
                       (qidiruvda raqobat qilmasligi uchun noindex)
 ```
 
@@ -27,19 +27,14 @@ v1/                   birinchi versiya — to'liq ishlaydigan arxiv nusxasi
 > `robots.txt` ni qidiruv tizimlari o'qimaydi — u faqat `flarestamina.com/robots.txt`
 > dan o'qiladi. Bu fayllar chzq.uz ga o'tgandan keyin kuchga kiradi.
 
-## Dizayn (v2)
+## Dizayn
 
-x.ai uslubidagi **monoxrom, hairline-grid** tizim:
+Yorug'/qorong'i mavzu, lime aksent (`#CFF54A`), Unbounded sarlavha + Inter matn.
+Mavzu tugma orqali almashadi va `localStorage`da saqlanadi.
 
-| Nima | Qanday |
-|---|---|
-| Rang | Faqat qora va oq. Aksent rang yo'q. Standart holat — qorong'i |
-| Chiziqlar | Butun sahifa 1px `rgba(255,255,255,.08)` to'r ustida quriladi (`.mesh`, `.shell` relslari) |
-| Shrift | Sarlavha va matn — Inter; raqam, yorliq va meta — JetBrains Mono |
-| Burchak | Deyarli to'g'ri (`--r: 3px`) |
-| Soya / gradient | Yo'q. Faqat chiziq va fon farqi |
-| Animatsiya | Faqat scroll-reveal va hover — 0.2–0.7s, `cubic-bezier(.16,1,.3,1)` |
-| Yorug' rejim | Bor (oq fon, qora matn) — bosh tugma orqali, `localStorage`da saqlanadi |
+Marketing bo'limlari: hero (mokap + ishonch chiplari), xizmatlar, jonli ishlar,
+nega biz, taqqoslash jadvali, jarayon, narxlar, kafolat, savol-javob, brif formasi.
+FAQ uchun `FAQPage` structured data JS orqali hosil qilinadi.
 
 ## Nimani qayerdan o'zgartirish kerak
 
@@ -59,9 +54,12 @@ Yangi matn qo'shsangiz — uchala tilga ham qo'shing, aks holda til almashganda 
 
 ## Brend fayllarini qayta yaratish
 
+Asosiy saytning brend fayllari qo'lda tayyorlangan. Monoxrom variantning
+generatori `v2/tools/brand.py` da:
+
 ```bash
 pip install pillow
-CHZQ_FONTS=/shriftlar/papkasi python3 tools/brand.py
+CHZQ_FONTS=/shriftlar/papkasi python3 v2/tools/brand.py
 ```
 
 `CHZQ_FONTS` ichida `InstrumentSans-Bold.ttf` (sarlavha) va `JetBrainsMono-Regular.ttf`
@@ -81,4 +79,4 @@ SVG'ni o'zgartirsangiz `tools/brand.py` dagi koordinatalarni ham moslang.
 3. GitHub → Settings → Pages → Custom domain: `chzq.uz` → Enforce HTTPS
 4. `index.html` ichidagi `https://flarestamina.com/chzquz/` manzillarini `https://chzq.uz/` ga
    almashtiring (canonical, og:url, og:image, twitter:image va JSON-LD), shuningdek
-   `robots.txt` va `sitemap.xml` da. `v1/index.html` da esa `/chzquz/v1/` → `/v1/`.
+   `robots.txt` va `sitemap.xml` da. `v2/index.html` da esa `/chzquz/v2/` → `/v2/`.

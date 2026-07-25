@@ -1,69 +1,36 @@
 <!DOCTYPE html>
-<html lang="uz" data-theme="dark">
+<html lang="uz">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Sahifa topilmadi — chiziq</title>
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#000000">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Unbounded:wght@700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#000;--ink:#fff;--ink2:rgba(255,255,255,.6);--ink4:rgba(255,255,255,.28);
-  --hair:rgba(255,255,255,.08);
-  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-}
-body{
-  min-height:100vh;background:var(--bg);color:var(--ink);font-family:var(--sans);
-  display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;
-}
-.shell{max-width:1340px;width:100%;margin:0 auto;border-inline:1px solid var(--hair);flex:1;display:flex;flex-direction:column}
-.bar{
-  height:60px;display:flex;align-items:center;gap:9px;
-  padding-inline:clamp(18px,4vw,44px);border-bottom:1px solid var(--hair);
-}
-.bar b{font-size:1.0625rem;font-weight:600;letter-spacing:-.05em}
-.bar i{font-family:var(--mono);font-style:normal;font-size:.6875rem;color:var(--ink4)}
-main{flex:1;display:flex;align-items:center;padding:clamp(40px,10vw,90px) clamp(18px,4vw,44px)}
-.k{font-family:var(--mono);font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink4)}
-h1{
-  font-family:var(--mono);font-weight:400;font-size:clamp(3.5rem,17vw,9rem);
-  letter-spacing:-.06em;line-height:.9;margin-top:22px;
-}
-p{color:var(--ink2);margin-top:20px;font-size:1.0625rem;max-width:40ch;line-height:1.55}
-a.btn{
-  display:inline-flex;align-items:center;gap:9px;margin-top:32px;height:46px;padding:0 22px;
-  background:#fff;color:#000;border-radius:3px;font-size:.875rem;font-weight:500;text-decoration:none;
-}
-a.btn:hover{opacity:.84}
-a.btn svg{width:16px;height:16px}
-.foot{
-  border-top:1px solid var(--hair);padding:20px clamp(18px,4vw,44px);
-  font-family:var(--mono);font-size:.625rem;letter-spacing:.06em;color:var(--ink4);
-}
+body{min-height:100vh;display:grid;place-items:center;background:#0A0B0D;color:#F2F5F8;
+  font-family:Inter,-apple-system,sans-serif;text-align:center;padding:26px}
+.n{font-family:Unbounded,sans-serif;font-size:clamp(3.4rem,14vw,7rem);letter-spacing:-.05em;line-height:1}
+.n span{color:#CFF54A}
+p{color:#8B93A1;margin:18px 0 30px;font-size:1.02rem}
+a{display:inline-block;background:#CFF54A;color:#0A0B0D;text-decoration:none;font-weight:700;
+  padding:13px 24px;border-radius:999px;font-size:.94rem}
+svg{width:52px;height:52px;margin:0 auto 22px}
 </style>
 </head>
 <body>
-<div class="shell">
-  <a class="bar" href="./" style="text-decoration:none;color:inherit"><b>chiziq</b><i>chzq.uz</i></a>
-  <main>
-    <div>
-      <span class="k">Xato 404</span>
-      <h1>404</h1>
-      <p>Bu sahifa mavjud emas yoki manzili o'zgargan.</p>
-      <a class="btn" href="./">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
-        Bosh sahifaga qaytish
-      </a>
-    </div>
-  </main>
-  <div class="foot">chiziq · chzq.uz</div>
+<div>
+  <svg viewBox="0 0 48 48" aria-hidden="true">
+    <path d="M6 32.5h36" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".28"/>
+    <path d="M12.5 34.5h8.2L37 11.5h-8.2z" fill="#CFF54A" stroke="#CFF54A" stroke-width="4.4" stroke-linejoin="round"/>
+  </svg>
+  <div class="n">4<span>0</span>4</div>
+  <p>Bu sahifa mavjud emas.</p>
+  <a href="./">Bosh sahifaga qaytish</a>
 </div>
 </body>
 </html>
