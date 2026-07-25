@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://flarestamina.com/chzquz1/sitemap.xml
