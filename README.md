@@ -2,13 +2,14 @@
 
 Veb-studiya sayti. Statik, GitHub Pages'da turadi.
 
-- **Sayt:** https://flarestamina.com/chzquz/
-- **Monoxrom variant (arxiv):** https://flarestamina.com/chzquz/v2/ — `noindex`
-- **Kelajakdagi manzil:** https://chzq.uz
+- **Sayt:** https://chzq.uz
+- **Monoxrom variant (arxiv):** https://chzq.uz/v2/ — `noindex`
+- **Eski manzil:** https://flarestamina.com/chzquz/ — chzq.uz ga yo'naltiriladi
 
 ## Tuzilishi
 
 ```
+CNAME                 custom domen: chzq.uz
 index.html            butun sayt (HTML + CSS + JS bitta faylda)
 404.html              xato sahifasi
 favicon.svg/.ico      brend belgisi — monoxrom
@@ -23,9 +24,8 @@ v2/                   monoxrom variant — to'liq ishlaydigan arxiv nusxasi
                       (qidiruvda raqobat qilmasligi uchun noindex)
 ```
 
-> Diqqat: sayt domenning ildizida emas, `/chzquz/` yo'lida turadi. Shuning uchun
-> `robots.txt` ni qidiruv tizimlari o'qimaydi — u faqat `flarestamina.com/robots.txt`
-> dan o'qiladi. Bu fayllar chzq.uz ga o'tgandan keyin kuchga kiradi.
+> Sayt `chzq.uz` domenining ildizida turadi, shuning uchun `robots.txt` va
+> `sitemap.xml` qidiruv tizimlari tomonidan o'qiladi.
 
 ## Dizayn
 
@@ -70,13 +70,11 @@ Belgining manbasi — `favicon.svg`: qora kvadrat, oq qiyshiq chiziq va pastda x
 chiziq. Generator ham aynan shu 48×48 viewBox koordinatalaridan foydalanadi, shuning uchun
 SVG'ni o'zgartirsangiz `tools/brand.py` dagi koordinatalarni ham moslang.
 
-## chzq.uz ga o'tkazish
+## Domen
 
-1. Repo ildiziga `CNAME` fayli qo'shing, ichida bitta qator: `chzq.uz`
-2. Domen registratorida DNS yozuvlari:
-   - `A` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - yoki `CNAME` (www uchun) → `maqsudjon-cell.github.io`
-3. GitHub → Settings → Pages → Custom domain: `chzq.uz` → Enforce HTTPS
-4. `index.html` ichidagi `https://flarestamina.com/chzquz/` manzillarini `https://chzq.uz/` ga
-   almashtiring (canonical, og:url, og:image, twitter:image va JSON-LD), shuningdek
-   `robots.txt` va `sitemap.xml` da. `v2/index.html` da esa `/chzquz/v2/` → `/v2/`.
+`chzq.uz` ulangan: repo ildizidagi `CNAME` fayli orqali. DNS'da apex va `www`
+uchun `A` yozuvlari GitHub Pages IP'lariga (`185.199.108–111.153`) ishora qiladi.
+
+Domenni almashtirsangiz: `CNAME` faylini yangilang va `index.html` (canonical,
+og:url, og:image, twitter:image, JSON-LD), `v2/index.html`, `robots.txt`,
+`sitemap.xml` dagi manzillarni ham moslang.
