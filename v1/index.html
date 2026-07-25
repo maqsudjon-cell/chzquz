@@ -259,16 +259,17 @@ h1 .u path{stroke:var(--acc);stroke-width:9;fill:none;stroke-linecap:round;
       </button>
     </div>
   </div>
-  <div class="mnav" id="mnav">
-    <a href="#services" data-i18n="nav_s">Xizmatlar</a>
-    <a href="#works" data-i18n="nav_w">Ishlar</a>
-    <a href="#why" data-i18n="nav_y">Nega biz</a>
-    <a href="#process" data-i18n="nav_pr">Jarayon</a>
-    <a href="#pricing" data-i18n="nav_p">Narxlar</a>
-    <a href="#faq" data-i18n="nav_f">Savollar</a>
-    <a class="btn btn-p" href="#contact" data-i18n="nav_cta">Bepul prototip</a>
-  </div>
 </header>
+
+  <div class="mnav" id="mnav">
+  <a href="#services" data-i18n="nav_s">Xizmatlar</a>
+  <a href="#works" data-i18n="nav_w">Ishlar</a>
+  <a href="#why" data-i18n="nav_y">Nega biz</a>
+  <a href="#process" data-i18n="nav_pr">Jarayon</a>
+  <a href="#pricing" data-i18n="nav_p">Narxlar</a>
+  <a href="#faq" data-i18n="nav_f">Savollar</a>
+  <a class="btn btn-p" href="#contact" data-i18n="nav_cta">Bepul prototip</a>
+</div>
 
 <main id="main">
 <span id="top"></span>
@@ -396,7 +397,7 @@ h1 .u path{stroke:var(--acc);stroke-width:9;fill:none;stroke-linecap:round;
 .frame{background:var(--card2);border-bottom:1px solid var(--line2);padding:10px 12px;display:flex;align-items:center;gap:8px}
 .dots{display:flex;gap:5px;flex:none}
 .dots i{width:9px;height:9px;border-radius:99px;background:var(--line);display:block}
-.urlbar{flex:1;background:var(--bg);border:1px solid var(--line2);border-radius:7px;padding:4px 11px;font-size:.71rem;color:var(--mut);
+.urlbar{flex:1;min-width:0;overflow-wrap:anywhere;background:var(--bg);border:1px solid var(--line2);border-radius:7px;padding:4px 11px;font-size:.71rem;color:var(--mut);
   font-weight:550;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;letter-spacing:.01em}
 .shot{position:relative;aspect-ratio:1.75;overflow:hidden;background:var(--card2);cursor:pointer;border:0;padding:0;width:100%;display:block}
 .shot img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s cubic-bezier(.2,.7,.3,1)}
@@ -523,7 +524,8 @@ h1 .u path{stroke:var(--acc);stroke-width:9;fill:none;stroke-linecap:round;
 .crow:hover{border-color:var(--line);transform:translateX(3px)}
 .crow .ci{width:38px;height:38px;border-radius:10px;background:var(--acc-soft);display:grid;place-items:center;color:var(--acc-txt);flex:none}
 .crow .ci svg{width:18px;height:18px}
-.crow b{display:block;font-size:.95rem;font-weight:650;letter-spacing:-.01em}
+.crow b{display:block;font-size:.95rem;font-weight:650;letter-spacing:-.01em;overflow-wrap:anywhere}
+.crow>span:last-child{min-width:0}
 .crow span{display:block;font-size:.78rem;color:var(--mut)}
 .toast{position:fixed;left:50%;bottom:26px;translate:-50% 0;background:var(--ink);color:var(--bg);padding:13px 22px;border-radius:999px;
   font-size:.87rem;font-weight:650;z-index:120;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;transform:translateY(10px);box-shadow:var(--shadow)}
@@ -568,9 +570,17 @@ footer{border-top:1px solid var(--line2);padding:56px 0 34px;background:var(--bg
   .lb{padding:10px}
 }
 @media (max-width:460px){
+  .fcol a,.wbody h3{overflow-wrap:anywhere}
   .steps{grid-template-columns:1fr}
   .inclg{grid-template-columns:1fr}
   .wrap{padding:0 18px}
+  /* header qatori 360-390px ekranlarga sig'ishi uchun */
+  .hrow{gap:9px}
+  .hact{gap:6px;margin-left:4px}
+  .logo span{display:none}
+  .logo .mk{width:27px;height:27px}
+  .langs{padding:2px}
+  .langs button{padding:5px 7px;font-size:.72rem}
 }
 </style>
 
