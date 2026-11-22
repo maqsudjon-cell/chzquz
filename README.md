@@ -48,7 +48,7 @@ Hammasi `index.html` ichida:
 | Savol-javob | JS'dagi `var FAQ=[...]` |
 | Narxlar | `#pricing` HTML'i + `T` dagi `pl*`, `ex*`, `mln` kalitlari |
 | Tarjimalar | JS'dagi `var T={uz:{...},ru:{...},en:{...}}` |
-| Telefon / Telegram / email | HTML'da `tel:`, `t.me/mrbmp13`, `mailto:` havolalari |
+| Telefon / Telegram / email | HTML'da `tel:`, `t.me/ferrasium`, `mailto:` havolalari |
 
 Yangi matn qo'shsangiz — uchala tilga ham qo'shing, aks holda til almashganda bo'sh qoladi.
 
